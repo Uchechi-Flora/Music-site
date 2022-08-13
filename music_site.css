@@ -1,0 +1,413 @@
+/* THE .NAV CLASS IS BASICALLY FOR THE PART WITH THE MENU A WIDTH OF 350PX AND TRANSLATE IT TO -350PX TO GET IT OFF SCREEN COMPLETELY*/
+/*THE .NAV-OPEN, TARGETING THE .NAV CLASS TRANSFORM TO TRANSLATE 0, WHEN YOU DO THIS IT BECOMES OPEN, BUT IT IS BLOCKING THE OTHER CONTENT */
+/* THE .NAV-OPEN . CONTENT TRANSFORM 350PX IS WHEN THE NAV BAR IS PUSHED OPEN IT PUSHES THE OTHER CONTENTS TO THE RIGHT OF 350PX*/
+/*THE FONT-FAMILY IN THE BODY, IS BASICALLY FOR THE INNER MENU AND ALSO JUST INCASE SOME BROWSERS DO NOT HAVE THE ONE USED */
+
+body {
+    margin:0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: #0C0404;
+}
+
+/* FOR THE INNER MENU*/
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .content {
+    transform: translateX(250px);
+}
+
+.nav-open footer {
+    bottom: 0;
+    transform: translateX(250px);
+}
+
+.nav-open .typing-text {
+    margin-right: 50px;
+    font-size: 25px;
+}
+.nav {
+    width:250px;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: #0C0404;;
+    transform: translateX(-250px);
+    transition: transform 0.2s;
+    overflow: hidden;
+}
+
+.nav-close {
+    background: none;
+    border:none;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 15px 25px;
+    cursor:pointer;
+}
+.nav-container {
+    box-shadow: 0 -10px 10px #4444;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color:white;
+    padding: 15px 25px;
+    margin-top: 50px;
+    
+}
+
+.nav-text {
+    font-size: 22px;
+    font-family: 'Assistant',sans-serif;
+    font-weight: 200;
+}
+
+.nav-links:hover,
+.nav-close:hover {
+    background: #aa9afc;
+}
+
+.flags {
+    width:9%;
+}
+/* THIS IS FOR THE MAIN BODY, THE STARZ.... */
+main {
+    transition: transform 0.2s;
+}
+
+/*STARZ HEADING */
+.top-heading {
+    position: relative;
+    margin-left:45px;
+}
+
+/*MORE MENU */
+.first-nav {
+   text-align: left;
+   background-color: #0C0404;
+   height:80px;
+   width:100%;
+}
+
+div{
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+h2 {
+    color:white;
+    font-family: 'Bell MT';
+    font-size: 80px;
+    animation: fadeIn 8s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.text {
+    color: white;
+    font-family: 'Lucida Sans';
+}
+
+.typing-effect {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.typing-text {
+    width: 85ch;
+    color:white;
+    animation: typing 4s steps(44), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+@keyframes typing {
+    from {width:0}
+}
+@keyframes blink {
+    10% {
+        border-color: transparent;
+    }
+}
+/*
+h4 {
+    text-align: center;
+    color:white;
+    font-family: 'Source Code Pro', monospace;
+    animation: typewriter 4s steps(44, end) 1s 1 normal both, blinkTextCursor 600ms steps(44, end) infinite normal;
+}
+
+@keyframes typewriter {
+    from{width: 5%;}
+    to{width:100%;}
+}
+
+@keyframes blinkTextCursor {
+    from{border-right-color: rgba(255, 255, 255, 0.75);}
+    to{border-right-color:transparent;}
+}
+*/
+/* BUTTONS:DOWNLOAD AND SIGN-UP*/
+.starz-btn{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 27px;
+    font-weight: bold;
+    border:2px solid #aa9afc;
+    background:transparent;
+    color:white;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+    font-family: "Baskerville Old Face"
+}
+.span{
+    background: #c976fd;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.7s;
+}
+button:hover span{
+      width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+.buttons {
+    width:100%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background-color: #4444;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:80px;
+    padding: 3px;
+    color: white;
+}
+
+.footer-container ul li {
+    display: inline-block;
+    justify-content: space-between;
+    text-decoration: none;
+    color:white;
+    padding: 15px 25px;
+    list-style: none;
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+}
+
+
+/* BREAKPOINTS */
+
+@media screen and (min-width:480px) and (max-width:600px) {
+    body{
+        background-color: #0C0404;
+    }
+
+    .nav {
+        width:150px;
+        height:100vh;
+        position: fixed;
+        top:0;
+        left: 0;
+        background-color: #0C0404;;
+        transform: translateX(-150px);
+        transition: transform 0.2s;
+        overflow: hidden;
+    }
+
+    .nav-links {
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        color:white;
+        padding: 13px 23px;
+        margin-top: 40px;
+        
+    }
+    
+    .nav-text {
+        font-size: 12px;
+        font-family: 'Assistant',sans-serif;
+        font-weight: 50;
+    }
+
+    .typing-text {
+        font-size: 11px;
+    }
+    .typing-effect {
+        text-align: center;
+        color:white;
+        font-family: 'Source Code Pro', monospace;
+        animation: typewriter 4s steps(44, end) 1s 1 normal both, blinkTextCursor 600ms steps(44, end) infinite normal;
+    }
+    
+    @keyframes typewriter {
+        from{width: 5%;}
+        to{width:100%;}
+    }
+    
+    @keyframes blinkTextCursor {
+        from{border-right-color: rgba(255, 255, 255, 0.75);}
+        to{border-right-color:transparent;}
+    }
+
+    .nav-open .typing-effect {
+        display: none;
+    }
+    .nav-open .content {
+        transform: translateX(150px);
+    }
+    
+    .nav-open footer {
+        bottom: 0;
+        transform: translateX(150px);
+    }
+
+    .nav-open .text {
+        font-size: 15px;
+        margin-right:150px;
+    }
+
+    .nav-open .text-list {
+        display: table-row;
+    }
+
+    .nav-open .top-heading {
+        position: relative;
+        margin-right: 155px;
+    }
+
+    .nav-open h2 {
+        color:white;
+        font-family: 'Bell MT';
+        font-size: 40px;
+    }
+
+    .nav-open footer {
+        display: flex;
+    }
+
+    .nav-open .footer-container ul li {
+        justify-content: space-between;
+        text-decoration: none;
+        color:white;
+        padding: 9px 13px;
+        margin-right:-5px;
+        list-style: none;
+    }
+
+    .nav-open #dload-btn {
+        margin-top:15%;
+    }
+  
+     .nav-open .starz-btn {
+        display: list-item;
+     }
+}
+
+
+@media screen and (min-width:700px) and (max-width:900px) {
+    body{
+        background-color: #0C0404;
+    }
+
+    .nav {
+        width:150px;
+        height:100vh;
+        position: fixed;
+        top:0;
+        left: 0;
+        background-color: #0C0404;;
+        transform: translateX(-150px);
+        transition: transform 0.2s;
+        overflow: hidden;
+    }
+
+    .nav-links {
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        color:white;
+        padding: 13px 23px;
+        margin-top: 40px;
+        
+    }
+    
+    .nav-text {
+        font-size: 18px;
+        font-family: 'Assistant',sans-serif;
+        font-weight: 100;
+    }
+
+    .typing-text {
+        font-size: 15px;
+    }
+
+    .nav-open .typing-text {
+       font-size: 13px;
+       margin-right:105px;
+       color:white;
+    } 
+
+    .nav-open .content {
+        transform: translateX(150px);
+    }
+    
+    .nav-open footer {
+        bottom: 0;
+        transform: translateX(150px);
+    }
+
+    .nav-open .text {
+        font-size: 20px;
+        margin-right:150px;
+    }
+
+    .nav-open .top-heading {
+        position: relative;
+        margin-right: 155px;
+    }
+ 
+}
+
+

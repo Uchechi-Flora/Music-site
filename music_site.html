@@ -1,0 +1,103 @@
+<!--PUSH BAR NAVIGATION BAR MUSIC WEBSITE-->
+<html>
+    <head>
+        <title> STARZ </title>
+        <link rel="stylesheet" href="music_site.css">
+        <script type = "text/javascript" src = "../JQUERY STUFF/jquery.min.js"></script>
+        <script src="../JQUERY STUFF/jquery-ui/jquery-ui.js"></script>
+        <link href="../JQUERY STUFF/jquery-ui/jquery-ui.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/fa158748e7.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+      
+        <nav class="nav">
+            <button type="button" class="nav-close"><i class="fa-solid fa-2x fa-xmark" style="color: white;"></i></button>
+           
+
+            <div class="nav-container">
+                <a href="#" class="nav-links">
+                    <span class="nav-text">TOP CHARTS WORLDWIDE</span>
+                    <i class="fa-solid fa-globe"size="large"></i>
+                </a>
+
+                <a href="#" class="nav-links">
+                    <span class="nav-text">TOP 20 UK</span>
+                    <img src="../IMAGES/flag-united-kingdom-emoji-removebg-preview.png"class="flags">
+                </a>
+
+                <a href="#" class="nav-links">
+                    <span class="nav-text">TOP 20 AFRICA</span>
+                    <img src="../IMAGES/africa.jpg"class="flags">
+                </a>
+
+
+                <a href="#" class="nav-links">
+                    <span class="nav-text">SIGN UP</span>
+                    <i class="fa-solid fa-user-plus" size="large"></i>
+                </a>
+
+                <a href="#" class="nav-links">
+                    <span class="nav-text">LOG IN </span>
+                    <i class="fa-solid fa-arrow-right-to-bracket" size="large"></i>
+                </a>
+            </div>
+        </nav>
+
+        <main class="content">
+           
+           <div class="first-nav">
+            <i class="fa-solid fa-lg fa-align-justify" onclick="toggleNav()"style="color: white; margin:25px 0px 0px 10px;"></i></button>
+    </div>
+
+       <div class="top-heading">
+        <h2>MEWZIC</h2>
+    </div>
+
+    <div class="text">
+        <h5>MEWZIC is a music website landing page, designed by Flora. 
+            <ul class="text-list">
+            <li>Listen to artistes all over the world.</li>
+            <li>Find out if your favourite artiste made it on the top charts.</li>
+            <li>Check out the top 20 songs in the UK, in Africa and other countries and continents.</li>
+        </ul>
+    </h5>
+    </div>
+   
+    <br>
+    <div class="typing-effect">
+        <div class="typing-text">
+    <h4>Download the app OR Sign-Up to get more info and to listen to your favourite songs</h4>
+        </div>
+    </div>
+    <br>
+    <div class="buttons">
+    <button type="button" class="starz-btn"id="dload-btn"><span class="span"></span>DOWNLOAD</button>
+    <button type="button" class="starz-btn"><span class="span" ></span>SIGN-UP</button>
+       </div>
+
+</main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <ul class="icons">
+                <li><a href="https://github.com/Uchechi-Flora"><i class="fa-brands fa-lg fa-github" style="color: white;" ></i></a></li>
+                <li><a href="https://www.linkedin.com/in/nwokocha-flora-936a4b21b"><i class="fa-brands fa-lg fa-linkedin" style="color: white;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-lg fa-twitter" style="color: white;"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-lg fa-envelope" style="color: white;"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+       
+        <script type="text/javascript">
+            
+            function toggleNav() {
+                document.body.classList.toggle("nav-open");
+            }
+            document.querySelector(".nav-close").addEventListener("click", () => {
+                toggleNav();
+            })
+            
+        </script>
+    </body>
+</html>
